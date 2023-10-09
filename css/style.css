@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f3f3f3;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    color: #000;
+    font-weight: 700;
+}
+
+h3 {
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+header {
+    position: absolute;
+    left: 0rem;
+    right: 0rem;
+    padding: 0px 1rem;
+    z-index: 5;
+    transition: .8s;
+    background-color: #422378;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + body {
+    padding-top: 120px;
+}
+
+.portfolio-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.portfolio-row {
+    display: flex;
+}
+
+.header-wrap {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-name p {
+    background-color: #FFF;
+    margin-right: 8px;
+    width: 34px;
+    height: 34px;
+    padding-top: 8px;
+    text-align: center;
+    border-radius: 5px;
+    color: #422378;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.my-name a {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #eee;
+    font-family: 'Poppins', sans-serif;
+}
+
+.my-name:hover {
+    opacity: 0.8;
+    transition-duration: 0.3s;
+}
+
+.portfolio-navbar ul li {
+    display: inline;
+    margin-left: 30px;
+}
+
+.portfolio-navbar ul li a {
+    font-size: 1rem;
+    line-height: 72px;
+    color: #FFF;
+    font-weight: 200;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.portfolio-navbar ul li a:hover {
+    background-color: #FFF;
+    color: #422378;
+    border-radius: 5px;
+}
+
+.other-links ul li {
+    display: inline;
+    margin-left: 25px;
+}
+
+.other-links ul li a {
+    font-size: 1.3rem;
+    color: #FFF;
+    font-weight: 300;
+    position: relative;
+}
+
+.other-links ul li a:hover {
+    transition-duration: 0.3s;
+    opacity: 0.8;
+}
+
+.bars-icon i {
+    cursor: pointer;
+    color: #FFF;
+    font-size: 1rem;
+    display: none;
+}
+
+.scroll-snap {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+.slider {
+    position: relative;
+    padding: 200px 10% 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.slider-content {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slider-general {
+    flex: 0 0 auto;
+    width: 60%;
+}
+
+.slider-general p {
+    line-height: 30px;
+    padding-right: 15%;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    margin-top: 18px;
+    margin-left: 3px;
+}
+
+.welcome-text h1 {
+    display: inline
+}
+
+.text-wrap {
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.welcome-title {
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 1.1px #000;
+}
+
+.welcome-title::before {
+    content: attr(data-fill-text);
+    position: absolute;
+    width: 0;
+    height: 100%;
+    font-weight: 600;
+    transition: width 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+    color: #000;
+    white-space: nowrap;
+    -webkit-text-stroke: 0 transparent;
+}
+
+.welcome-title:hover::before {
+    width: 100%;
+}
+
+.download-resume a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 25px;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    background-color: #422378;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    line-height: 30px;
+    border-radius: 50px 0 50px 50px;
+    text-align: center;
+}
+
+.download-resume a:hover {
+    transition-duration: 0.3s;
+    -webkit-filter: drop-shadow(3px 3px 3px #6a39be);
+    filter: drop-shadow(3px 3px 3px #6a39be);
+}
+
+.slider-image {
+    flex: 0 0 auto;
+    width: 40%;
+}
+
+.welcome-image {
+    position: relative;
+    z-index:0;
+    transition-duration: 0.4s;
+}
+
+.welcome-image:hover {
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #cac6c6);
+    transition-duration: 0.3s;
+}
+
+.welcome-image img {
+    max-height: 500px;
+    width: 70%;
+    object-fit: cover;
+    vertical-align: middle;
+    border-radius: 0px 50px;
+    cursor: pointer;
+}
+
+.other-links.show {
+    display: flex;
+}
+
+.experience-title h1 {
+    font-size: 2.0rem;
+    margin-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color:#000;
+    font-weight: 200;
+    padding-top: 6rem;
+}
+
+.experience-section {
+    width: 100%;
+    max-width: 1140px;
+    padding-left: 5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    margin: 0 auto;
+}
+
+.timeline {
+    margin-top: 1.5rem;
+    width: 90%;
+    border-left: 2px solid #ccc;
+    padding: 0 0px 0 30px;
+}
+
+.checkpoint {
+    padding: 10px 25px;
+    font-size: 16px;
+    line-height: 1.7;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+.checkpoint:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: 3px solid #ccc;
+    position: absolute;
+    top: 25px;
+    left: -36px;
+}
+
+.checkpoint h1 {
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #422378;
+}
+
+.checkpoint h2 {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #422378;
+}
+
+.checkpoint h3 {
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    color: #6B7280;
+}
+
+.checkpoint ul li {
+    list-style-type: disc;
+    margin-left: 1rem;
+}
+
+.projects-title h1 {
+    font-size: 2.0rem;
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color:#000;
+    font-weight: 200;
+}
+
+.projects-section {
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: 1fr;
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.grid-item {
+    margin-bottom: 20px;
+}
+
+.project-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: justify;
+    word-break: break-all;
+    background-color: #f1f1f1;
+}
+
+.project-card p {
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+.project-heading {
+    margin-bottom: 10px;
+}
+
+.project-heading a {
+    color: #422378;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.project-heading a:hover {
+    opacity: 0.8;
+    transition-duration: 0.3s;
+}
+
+.project-heading p {
+    color: #6B7280;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    display: block; 
+}
+
+/* Responsive max-width:1120px */
+
+@media screen and (max-width:1120px) {
+    h1,
+    h2 {
+        font-size: 3rem;
+    }
+
+    header {
+        padding: 15px;
+        position: fixed;
+        border-bottom: 1px solid #EEE;
+    }
+
+    .portfolio-navbar {
+        position: absolute;
+        background-color: #422378;
+        width: 100%;
+        left: 0;
+        top: 48px;
+        border-top: 1px solid #FFF;
+        border-bottom: 1px solid #FFF;
+        display: none;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .portfolio-navbar.show {
+        display: block;
+    }
+
+    .portfolio-navbar ul li {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+        background-color: #422378;
+    }
+
+    .portfolio-navbar ul li a {
+        line-height: 50px;
+        font-size: 0.9rem;
+    }
+
+    .other-links {
+        display: inline;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .other-links ul li {
+        display: inline;
+        margin-left: 1.4rem;
+    }
+
+    .bars-icon i {
+        display: inline;
+        font-size: 1.2rem;
+    }
+    
+    .slider {
+        padding: 6rem 10% 0;
+    }
+
+    .slider-content {
+        text-align: center;
+    }
+
+    .slider-content.show {
+        margin-top: 15rem;
+    }
+
+    .slider-content p{
+        padding-right: 0%;
+    }
+
+    .slider-general {
+        order: 2;
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .slider-image {
+        width: 65%;
+        order: 1;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .welcome-image img {
+        max-width: 100%;
+        max-height: 100%;
+        height: 50%;
+    }
+
+    .projects-section {
+        grid-template-columns: auto auto;
+        max-width: 1000px;
+    }
+}
+
+/* Responsive max-width:640px */
+
+@media screen and (max-width:640px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    header {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .portfolio-container {
+        padding: 0rem 1rem;
+    }
+
+    .my-name a {
+        display: none;
+    }
+
+    .my-name p {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    other-links ul li {
+        margin-left: 1.0rem;
+    }
+
+    .download-resume a{
+        padding: 14px 15px;
+    }
+
+    .experience-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .experience-section {
+        padding-left: 3rem;;
+    }
+
+    .checkpoint {
+        padding: 10px 2px;
+    }
+
+    .checkpoint h1 {
+        font-size: 1.0rem;
+    }
+
+    .projects-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .projects-section {
+        grid-template-columns: auto;
+        padding: 10px;        
+    }
+
+    .project-heading a {
+        color: #422378;
+        font-size: 1.0rem;
+    }
+}
